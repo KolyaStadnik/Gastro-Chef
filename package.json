@@ -1,0 +1,27 @@
+{
+  "name": "lemonschool",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "ttf2woff2": "^8.0.0",
+    "vite": "^7.1.0"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.12",
+    "@tailwindcss/vite": "^4.1.11",
+    "sass": "^1.92.1",
+    "swiper": "^12.0.2",
+    "tailwindcss": "^4.1.12",
+    "vite-plugin-full-reload": "^1.2.0",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}
