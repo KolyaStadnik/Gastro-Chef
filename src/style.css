@@ -1,1 +1,76 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/public/assets/fonts/Montserrat-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/public/assets/fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/public/assets/fonts/Montserrat-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/public/assets/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/public/assets/fonts/Comfortaa-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/public/assets/fonts/Comfortaa-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/public/assets/fonts/Comfortaa-Bold.ttf) format('truetype');
+}
+
+@theme {
+    --font-comfortaa: Comfortaa, sans-serif;
+    --font-montserrat: Montserrat, sans-serif;
+    --color-green-400: #64D370; /*hover*/
+    --color-green-500: #26F03A; /*10% #26F03A1a*/
+    --color-green-600: #3D9646; /*active*/
+    --color-red-400: #F87676;
+    --color-red-500: #FE3666;
+    --color-blue-100: #F5FAFF;
+    --color-blue-200: #DEE6EE;
+    --color-blue-300: #F4F9FE;
+    --color-grey-950: #020202;
+    --container-6xl: calc(73.75rem + 160px);
+    --container-2xl: calc(43.125rem + 40px);
+    --shadow-md: 0 0 40px 0 #5656564d;
+    --shadow-lg: 0 0 30px 0 #5656564d;
+    --shadow-xl: 0 0 20px 0 #5656564d;
+}
