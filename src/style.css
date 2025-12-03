@@ -75,6 +75,9 @@
     --shadow-xl: 0 0 40px 0 #5656564d;
     --text-3xs: 8px;
     --text-2xs: 10px;
+    --text-26: 26px;
+    --text-35: 35px;
+    --text-40: 40px;
 }
 
 .burger.is-active .burger__icon {
@@ -135,9 +138,4 @@
 
 .burger__icon::after {
     top: 14px;
-}
-
-.swiper {
-  width: 600px;
-  height: 300px;
 }
