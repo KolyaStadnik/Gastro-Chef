@@ -1,4 +1,5 @@
 import './style.css'
+import './main.scss'
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
