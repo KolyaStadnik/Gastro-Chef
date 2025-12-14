@@ -37,4 +37,19 @@ const swiper = new Swiper('.swiper', {
     },
 });
 
+const languageItem = document.querySelectorAll('.language-item')
 
+function remuveActiveClasses() {
+  languageItem.forEach(function(item) {
+    item.classList.remove('bg-green-400')
+    item.classList.remove('text-blue-300')
+  }) 
+}
+
+languageItem.forEach(function(element) {
+  element.addEventListener('click', function() {
+    remuveActiveClasses()
+    element.classList.add('bg-green-400')
+    element.classList.add('text-blue-300')
+  })
+})
