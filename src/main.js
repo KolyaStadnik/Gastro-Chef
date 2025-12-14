@@ -7,10 +7,10 @@ const burger = document.querySelector('#burger')
 const mobileContainer = document.querySelector('#mobile-container')
 const body = document.querySelector('body')
 
-burger.addEventListener('click', ()=> {
+burger.addEventListener('click', () => {
     burger.classList.toggle('is-active')
     mobileContainer.classList.toggle('hidden')
-    body.classList.toggle('overflow-hidden') 
+    body.classList.toggle('overflow-hidden')
 })
 
 const swiper = new Swiper('.swiper', {
@@ -39,17 +39,55 @@ const swiper = new Swiper('.swiper', {
 
 const languageItem = document.querySelectorAll('.language-item')
 
-function remuveActiveClasses() {
-  languageItem.forEach(function(item) {
-    item.classList.remove('bg-green-400')
-    item.classList.remove('text-blue-300')
-  }) 
+function remuveActiveClassesLanguagePanel() {
+    languageItem.forEach(function (item) {
+        item.classList.remove('bg-green-400')
+        item.classList.remove('text-blue-300')
+    })
 }
 
-languageItem.forEach(function(element) {
-  element.addEventListener('click', function() {
-    remuveActiveClasses()
-    element.classList.add('bg-green-400')
-    element.classList.add('text-blue-300')
-  })
+languageItem.forEach(function (element) {
+    element.addEventListener('click', function (event) {
+        event.preventDefault()
+        remuveActiveClassesLanguagePanel()
+        element.classList.add('bg-green-400')
+        element.classList.add('text-blue-300')
+    })
 })
+
+const categorylink = document.querySelectorAll('.category-link')
+
+function remuveActiveClassesNavigationPanel() {
+    categorylink.forEach(item => {
+        item.classList.add('xl:w-17.5')
+        item.classList.add('w-10')
+        item.classList.remove('md:w-auto')
+        item.classList.remove('text-green-400')
+        item.querySelector('span').classList.add('md:hidden')
+    })
+}
+
+categorylink.forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault()
+        remuveActiveClassesNavigationPanel()
+        item.classList.remove('xl:w-17.5')
+        item.classList.remove('w-10')
+        item.classList.add('md:w-auto')
+        item.classList.add('text-green-400')
+        item.querySelector('span').classList.remove('md:hidden')
+    })
+})
+
+// const link = document.querySelector('.category-link')
+
+// categorylink.forEach(item => {
+//     document.addEventListener('click', (event) => {
+//         const withinBoundaries = event.composedPath().includes(link)
+
+//         if (!withinBoundaries) {
+//             remuveActiveClassesNavigationPanel()
+//         }
+//     })
+
+// })
