@@ -14,18 +14,27 @@ burger.addEventListener('click', ()=> {
 })
 
 const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  loop: true,
-  pagination: {
-    clickable: true,
-    dynamicBullets: true,
-    dynamicMainBullets: 4,
-    el: '.swiper-pagination',
-  },
+    loop: true,
+    speed: 500,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+        renderBullet: function (index, className) {
+            return `
+            <div class="${className} flex justify-center items-center cursor-pointer">
+                <svg viewBox="0 0 14 14" class="bullet-svg">
+                    <circle class="outer" r="5" cx="50%" cy="50%" fill="transparent" stroke="var(--color-green-400)" stroke-width="2"></circle>
+                    <circle class="inner" r="5" cx="50%" cy="50%" fill="transparent" stroke="var(--color-blue-200)" stroke-width="2" stroke-dasharray="31.4" stroke-dashoffset="31.4"></circle>
+                </svg>
+            </div>`;
+        }
+    },
 
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
+
+

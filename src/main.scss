@@ -2,27 +2,89 @@
     --swiper-navigation-size: 24px;
     --swiper-theme-color: var(--color-green-400);
 
-    .swiper-navigation {
-        display: flex;
-        align-items: center;
-        margin: 0 0 -3px 0;
+    .swiper-button-prev,
+    .swiper-button-next {
+        left: 5px;
+        transition: 0.3s;
 
-        .swiper-pagination {
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-            span.swiper-pagination-bullet {
-                opacity: 1;
-                border: 2px solid var(--color-green-400);
-                background-color: transparent;
-                width: 10px;
-                height: 10px;
-                transition: 0.3s width, 0.3s height;
-                margin: 0 5.5px;
+         
+        }
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: calc(50% + 1px);
+    }
 
-                &.swiper-pagination-bullet-active {
-                    width: 14px;
-                    height: 14px;
-                }
+    .swiper-button-prev {
+        &:hover {
+            --swiper-navigation-size: 34px;
+            left: 0;
+        }
+    }
+
+    .swiper-button-next {
+        right: 5px;
+
+        &:hover {
+            --swiper-navigation-size: 34px;
+            right: 0;
+        }
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+        --size: 19.6px;
+        margin: 0  2px;
+        width: var(--size);
+        height: var(--size);
+        background: transparent;
+        opacity: 1;
+        transition: 0.3s;
+        position: relative;
+
+        svg {
+            --size: 14px;
+            transition: 0.3s;
+            width: var(--size);
+            height: var(--size);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+            svg {
+                --size: 19.6px;
+                width: var(--size);
+                height: var(--size);
             }
         }
     }
+
+    .swiper-pagination-bullet-active {
+        svg {
+            --size: 19.6px;
+            width: var(--size);
+            height: var(--size);
+        }
+
+        .inner {
+            stroke-dashoffset: -23.96;
+        }
+    }
+}
+
+.bullet-svg .inner {
+    transition: stroke-dashoffset 0.5s;
 }
