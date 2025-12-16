@@ -91,3 +91,15 @@ categorylink.forEach(item => {
 //     })
 
 // })
+//});
+
+const network = document.querySelector('#social-networks-button')
+const social = document.querySelector('#social-networks-panel')
+const passivenetworks = document.querySelector('#passive-networks')
+const activenetworks = document.querySelector('#active-networks')
+
+network.addEventListener('click', ()=> {
+  social.classList.toggle('hidden')
+  activenetworks.classList.toggle('hidden')
+  passivenetworks.classList.toggle('hidden')
+})

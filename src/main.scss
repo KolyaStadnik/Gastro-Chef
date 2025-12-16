@@ -19,7 +19,7 @@
     
     .swiper-button-prev,
     .swiper-button-next {
-        top: calc(50% + 1px);
+        top: calc(30% + 1px);
     }
 
     .swiper-button-prev {
@@ -43,7 +43,7 @@
     }
 
     .swiper-pagination-bullet {
-        --size: 19.6px;
+        --size: 13px;
         margin: 0  2px;
         width: var(--size);
         height: var(--size);
