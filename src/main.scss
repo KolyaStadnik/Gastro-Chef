@@ -88,3 +88,25 @@
 .bullet-svg .inner {
     transition: stroke-dashoffset 0.5s;
 }
+
+.btn {
+    background-color: var(--color-green-400);
+    padding: 12px 24px;
+    margin-top: 10px;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--color-green-500);
+    }
+}
+
+.active {
+    background-color: orange;
+}
+
+.tab-content {
+    border: 1px solid;
+    display: none;
+    &.show {
+        display: block;
+    }
+}
