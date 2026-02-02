@@ -128,170 +128,239 @@ btnTabs.forEach(function (btn) {
     })
 })
 
-const qwerty = document.getElementById('content-1')
 
-const programsArr = [
-    {
-        express_fit
-    },
-    {
-        slim
-    },
-    {
-        fitness: [
-            {
-                discription: {
-                    title: 'fitnes',
-                    kcal: '1300',
-                    content: 'Программа здорового питания Express Fit. Идеально для: похудения в кратчайшие сроки, повышения энергии и сил, снижения веса при сидячем образе жизни.',
-                    price_list: {
-                        test_day: {
-                            old_price: '510',
-                            price: '357'
-                        },
-                        day_1: {
-                            old_price: false,
-                            price: '510'
-                        },
-                        day_7: {
-                            old_price: '510',
-                            price: '490'
-                        },
-                        day_14: {
-                            old_price: '510',
-                            price: '470'
-                        },
-                        day_30: {
-                            old_price: '510',
-                            price: '445'
-                        },
-                        breakfest_and_dinner: {
-                            old_price: '-15%',
-                            price: '433'
-                        },
-                    }
-                },
-                week: [
-                    {
-                        mon: {
-                            eating: [
-                                {
-                                    eating_title: 'Завтрак',
-                                    eating_time: '7:00 - 9:00',
-                                    eating_menu: [
-                                        {
-                                            menu_item: [
-                                                {
-                                                    item_title: '- Фриттата с сыром и кабачками',
-                                                    item_quantily: '170гр'
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    eating_title: '2-й завтрак',
-                                    eating_time: '10:00 - 12:00',
-                                    eating_menu: [
-                                        {
-                                            menu_item: [
-                                                {
-                                                    item_title: '- Фермерский йогурт',
-                                                    item_quantily: '200гр'
-                                                },
-                                                {
-                                                    item_title: '- Полезное печенье из сухофруктов и орехов',
-                                                    item_quantily: '2 шт'
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    eating_title: 'Обед',
-                                    eating_time: '13:00 - 15:00',
-                                    eating_menu: [
-                                        {
-                                            menu_item: [
-                                                {
-                                                    item_title: '- Люля-кебаб из индейки',
-                                                    item_quantily: '100гр'
-                                                },
-                                                {
-                                                    item_title: '- Летний салат с маслинами и сыром',
-                                                    item_quantily: '100гр'
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    eating_title: 'Полдник',
-                                    eating_time: '16:00 - 17:30',
-                                    eating_menu: [
-                                        {
-                                            menu_item: [
-                                                {
-                                                    item_title: '- Творожное суфле с какао и вишей',
-                                                    item_quantily: '100гр'
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    eating_title: 'Ужин',
-                                    eating_time: '19:00 - 20:00',
-                                    eating_menu: [
-                                        {
-                                            menu_item: [
-                                                {
-                                                    item_title: '- Рыбный терен',
-                                                    item_quantily: '100гр'
-                                                },
-                                                {
-                                                    item_title: '- Овощи гриль',
-                                                    item_quantily: '150гр'
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                            ],
-                        },
-                        tue: {
+// const installAccordion = () => {
+//     const accordion = document.querySelector('#accordion')
 
-                        },
-                        wed: {
+//     accordion.addEventListener('click', (event)=> {
+//         const accordionQuestion = event.target.closest('.accordion-question')
+//         if (!accordionQuestion) return
+//         const accordionItem = accordionQuestion.closest('.accordion-item')
+//         const accordionAnswer = accordionItem.querySelector('.accordion-answer')
+//         accordionQuestion.classList.toggle('accordion-question_active')
+//         accordionAnswer.classList.toggle('hidden')
+//     })
+// }
 
-                        },
-                        thu: {
+// installAccordion ()
 
-                        },
-                        fri: {
+const installAccordion = () => {
+    const accordion = document.querySelector('#accordion');
+    if(!accordion) return;
 
-                        },
-                        sat: {
+    const closeAll = () => {
+        accordion.querySelectorAll('.accordion-question_active').forEach(question => {
+            question.classList.remove('accordion-question_active');
+            const item = question.closest('.accordion-item');
+            const answer = item?.querySelector('.accordion-answer');
+            if (answer) answer.classList.add('hidden');
+        });
+    };
 
-                        },
-                        sun: {
+    accordion.addEventListener('click', (event) => {
+        const question = event.target.closest('.accordion-question');
+        if (!question) return;
 
-                        },
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        balance
-    },
-    {
-        balance_plus
-    },
-    {
-        strong
-    },
-    {
-        maxi_fit
-    },
-]
+        const item = question.closest('.accordion-item');
+        const answer = item?.querySelector('.accordion-answer');
+        if (!answer) return;
+
+        const isAlreadyOpen = question.classList.contains('accordion-question_active');
+
+        closeAll ();
+
+        if (!isAlreadyOpen) {
+            question.classList.add('accordion-question_active');
+            answer.classList.remove('hidden');
+        }
+    });
+};
+
+
+installAccordion ()
+
+
+
+// const installAccordion = ()=> {
+//     const accordionQuestion = document.querySelectorAll('.accordion-question')
+
+//     accordionQuestion.forEach(question =>{
+//         question.addEventListener('click', ()=>{
+//             const accordionItem = question.closest('.accordion-item')
+//             const accordionAnswer = accordionItem.querySelector('.accordion-answer')
+//             question.classList.toggle('accordion-question_active')
+//             accordionAnswer.classList.toggle('hidden')
+//         })
+//     })
+// }
+
+// installAccordion ()
+
+// const qwerty = document.getElementById('content-1')
+
+// const programsArr = [
+//     {
+//         express_fit
+//     },
+//     {
+//         slim
+//     },
+//     {
+//         fitness: [
+//             {
+//                 discription: {
+//                     title: 'fitnes',
+//                     kcal: '1300',
+//                     content: 'Программа здорового питания Express Fit. Идеально для: похудения в кратчайшие сроки, повышения энергии и сил, снижения веса при сидячем образе жизни.',
+//                     price_list: {
+//                         test_day: {
+//                             old_price: '510',
+//                             price: '357'
+//                         },
+//                         day_1: {
+//                             old_price: false,
+//                             price: '510'
+//                         },
+//                         day_7: {
+//                             old_price: '510',
+//                             price: '490'
+//                         },
+//                         day_14: {
+//                             old_price: '510',
+//                             price: '470'
+//                         },
+//                         day_30: {
+//                             old_price: '510',
+//                             price: '445'
+//                         },
+//                         breakfest_and_dinner: {
+//                             old_price: '-15%',
+//                             price: '433'
+//                         },
+//                     }
+//                 },
+//                 week: [
+//                     {
+//                         mon: {
+//                             eating: [
+//                                 {
+//                                     eating_title: 'Завтрак',
+//                                     eating_time: '7:00 - 9:00',
+//                                     eating_menu: [
+//                                         {
+//                                             menu_item: [
+//                                                 {
+//                                                     item_title: '- Фриттата с сыром и кабачками',
+//                                                     item_quantily: '170гр'
+//                                                 }
+//                                             ]
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     eating_title: '2-й завтрак',
+//                                     eating_time: '10:00 - 12:00',
+//                                     eating_menu: [
+//                                         {
+//                                             menu_item: [
+//                                                 {
+//                                                     item_title: '- Фермерский йогурт',
+//                                                     item_quantily: '200гр'
+//                                                 },
+//                                                 {
+//                                                     item_title: '- Полезное печенье из сухофруктов и орехов',
+//                                                     item_quantily: '2 шт'
+//                                                 }
+//                                             ]
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     eating_title: 'Обед',
+//                                     eating_time: '13:00 - 15:00',
+//                                     eating_menu: [
+//                                         {
+//                                             menu_item: [
+//                                                 {
+//                                                     item_title: '- Люля-кебаб из индейки',
+//                                                     item_quantily: '100гр'
+//                                                 },
+//                                                 {
+//                                                     item_title: '- Летний салат с маслинами и сыром',
+//                                                     item_quantily: '100гр'
+//                                                 }
+//                                             ]
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     eating_title: 'Полдник',
+//                                     eating_time: '16:00 - 17:30',
+//                                     eating_menu: [
+//                                         {
+//                                             menu_item: [
+//                                                 {
+//                                                     item_title: '- Творожное суфле с какао и вишей',
+//                                                     item_quantily: '100гр'
+//                                                 }
+//                                             ]
+//                                         }
+//                                     ]
+//                                 },
+//                                 {
+//                                     eating_title: 'Ужин',
+//                                     eating_time: '19:00 - 20:00',
+//                                     eating_menu: [
+//                                         {
+//                                             menu_item: [
+//                                                 {
+//                                                     item_title: '- Рыбный терен',
+//                                                     item_quantily: '100гр'
+//                                                 },
+//                                                 {
+//                                                     item_title: '- Овощи гриль',
+//                                                     item_quantily: '150гр'
+//                                                 }
+//                                             ]
+//                                         }
+//                                     ]
+//                                 },
+//                             ],
+//                         },
+//                         tue: {
+
+//                         },
+//                         wed: {
+
+//                         },
+//                         thu: {
+
+//                         },
+//                         fri: {
+
+//                         },
+//                         sat: {
+
+//                         },
+//                         sun: {
+
+//                         },
+//                     }
+//                 ]
+//             }
+//         ]
+//     },
+//     {
+//         balance
+//     },
+//     {
+//         balance_plus
+//     },
+//     {
+//         strong
+//     },
+//     {
+//         maxi_fit
+//     },
+// ]
+
