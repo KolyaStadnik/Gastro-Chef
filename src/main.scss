@@ -127,3 +127,58 @@
         transition: transform 0.3s;
     }
 }
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    &_control {
+        flex-direction: row;
+        position: relative;
+        & label {
+            padding-left: 50px;
+            line-height: 26px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+input[type="checkbox"] {
+    display: none;
+    & + label {
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: 4px;
+            background-color: #DEE6EE;
+            border-radius: 50%;
+        }
+        &::after {
+            content: "";
+            --size: 0;
+            width: var(--size);
+            height: var(--size);
+            position: absolute;
+            top: 13px;
+            left: 17px;
+            border-radius: 50%;
+            transition: 0.4s;
+            background-color: #64D370;
+        }
+        &:hover::after {
+            content: "";
+            --size: 6px;
+            top: 9px;
+            left: 14px;
+        }
+    }
+    &:checked + label::after {
+        content: "";
+        --size: 12px;
+        top: 6px;
+        left: 10px;
+    }
+}

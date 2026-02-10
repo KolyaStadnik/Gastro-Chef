@@ -1,8 +1,35 @@
-<form action="">
-    
-</form>
+<div class="max-w-2xl xl:max-w-6xl w-full ml-auto mr-auto pl-5 xl:pl-20 pr-5 xl:pr-19 relative mt-20 flex gap-10">
+    <div class="xl:max-w-146 flex flex-col gap-4 ml-1.25">
+    <h2 class="font-comfortaa font-bold text-30 ml-16.5">Оформить заказ</h2>
+    <p class="font-montserrat font-normal text-base tracking-wide max-w-95.5 text-center -mt-5 ml-4 leading-5.25">Обсудите все детали заказа по телефону или сами укажите все подробности онлайн</p>
+    <form>
+        <div class="flex flex-col">
+            <label for="user-name" class="test font-comfortaa font-bold text-lg tracking-wide text-green-400 mt-3 ml-3.5">Имя</label>
+            <input type="text" id="user-name" name="user-name" value="Иван" onfocus="this.value = '';" class="max-w-104.5 bg-blue-200 rounded-3xl h-10 pl-4 font-montserrat tracking-wide text-base mt-1">
+        </div>
+        <div class="flex flex-col">
+            <label for="user-pnone" class="test font-comfortaa font-bold text-lg tracking-wide text-green-400 mt-6.75 ml-4.25">Номер телефона</label>
+            <input type="number" id="user-pnone" name="user-pnone" value="0972140632" onfocus="this.value = '';" class="max-w-104.5 bg-blue-200 rounded-3xl h-10 pl-4 font-montserrat tracking-wide text-base mt-0.5">
+        </div>
+        <fieldset class="mt-7.75 ml-1.75">
+            <div class="input-box">
+                <input type="checkbox" id="test-day" name="test-day">
+                <label for="test-day" class="font-comfortaa font-bold tracking-wide">Тест-день! Получить скидку -30%?</label>
+        </div>
+        <div class="input-box">
+            <input type="checkbox" id="private-conditions" name="private-conditions">
+            <label for="private-conditions" class="font-comfortaa font-bold tracking-wide">Согласен с <span class="text-green-400">условиями сотрудничества</span></label>
+        </div>
+        </fieldset>
+        <div class="felx flex-col mt-3.75">
+            <button type="button" class="ml-14.25 pt-2.75 pr-6.5 pl-7 pb-2.5 font-comfortaa font-bold text-22 tracking-wide border-3 rounded-full hover:text-blue-100 hover:bg-green-400 border-green-400 text-green-400 bg-blue-100"> Заказ по телефону</button>
+            <p class="font-comfortaa font-bold text-22 mt-2.5 -ml-3 tracking-wide text-center">ИЛИ</p>
+            <button type="button" class="mt-1.75 ml-11 -ml-3.25 pt-3 pl-16.5 pb-2.75 pr-16.5 font-comfortaa font-bold text-2xl hover:text-green-400 hover:bg-blue-100 text-blue-100 bg-green-400 border-3 border-green-400 rounded-full tracking-wide">Онлайн заказ</button>
+        </div>
+    </form>
+</div>
 <section>
-        <div id="accordion" class="max-w-2xl xl:max-w-6xl w-full ml-auto mr-auto pl-5 xl:pl-20 pr-5 xl:pr-20 relative mt-20 flex flex-col gap-4">
+        <div id="accordion" class="flex flex-col gap-4 w-170 -mt-3.75 ml-9">
             <h2 class="font-comfortaa font-bold text-25 pl-35.5 pb-3">Часто задаваемые вопросы</h2>
             <div class="accordion-item max-w-170 bg-blue-100 shadow-md rounded-3xl min-h-10">
                 <h2 class="accordion-question pl-5 py-2.5 tracking-wide">Как осуществляется доставка правильного питания?</h2>
@@ -42,3 +69,4 @@
             </div>
         </div>
 </section>
+</div>

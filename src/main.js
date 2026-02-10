@@ -179,6 +179,24 @@ const installAccordion = () => {
 
 installAccordion ()
 
+const installControlInputs = () => {
+    const cheackbox = document.querySelectorAll('[type="checkbox"]')
+const radioButton = document.querySelectorAll('[type="radio"]')
+
+const creatControlModifire = (selector) => {
+    selector.forEach(control => {
+    const wrapper = control.closest('.input-box')
+    if(!wrapper) return
+    wrapper?.classList.add('input-box_control')
+})
+}
+
+creatControlModifire(cheackbox)
+creatControlModifire(radioButton)
+}
+
+(document.querySelectorAll('[type="checkbox"]').length > 0) || (document.querySelectorAll('[type="radio"]').length > 0) ? installControlInputs() : null
+
 
 
 // const installAccordion = ()=> {
