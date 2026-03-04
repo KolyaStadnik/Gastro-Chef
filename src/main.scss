@@ -125,13 +125,13 @@
         width: 9px;
         height: 15px;
         transition: transform 0.3s;
-        @media only screen and (max-width: 767.9px) {
-            top: 14px;
-            right: -34px;     
-        }
         @media only screen and (min-width: 768px) and (max-width: 1279.9px) {
             top: 14px;
             right: 9px;
+        }
+        @media only screen and (max-width: 767.9px) {
+            top: 14px;
+            right: -34px;     
         }
     }
 }
@@ -189,4 +189,33 @@ input[type="checkbox"] {
         top: 6px;
         left: 10px;
     }
+}
+
+.btn-active {
+    color: #F5FAFF;
+    background-color: #64D370;
+    border-color: #64D370;
+    box-shadow: 0 0 40px 0 #5656564d;
+    font-weight: 700;
+}
+
+.btn-active__ccal {
+    color: #64D370;
+    display: block;
+}
+
+.btn-active__week {
+    color: #64D370;
+}
+
+.program-active {
+    display: block;
+}
+
+.program-active__ccal {
+    display: block;
+}
+
+.program-active__week {
+    display: block;
 }

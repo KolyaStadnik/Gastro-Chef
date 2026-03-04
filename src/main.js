@@ -79,6 +79,12 @@ categorylink.forEach(item => {
     })
 })
 
+document.addEventListener('click', () => {
+    if(!event.target.closest('.category-link')) {
+        remuveActiveClassesNavigationPanel()
+    }
+})
+
 // const link = document.querySelector('.category-link')
 
 // categorylink.forEach(item => {
@@ -105,28 +111,73 @@ network.addEventListener('click', () => {
 })
 
 
-const btnTabs = document.querySelectorAll('[data-content-id]')
-const tabsContent = document.querySelectorAll('.tab-content')
+const installProgramsTabs = () => {
+    const btnTabs = document.querySelectorAll('[data-target-programs]')
+    const btnNav = document.querySelectorAll('[data-target-ccal]')
+    const btnWeek = document.querySelectorAll('[data-target-week]')
+    const tabsContent = document.querySelectorAll('.tab-content')
 
+    function removeActiveNavTabs() {
+        tabsContent.forEach(function (content) {
+            content.classList.remove('program-active')
+        })
+        btnTabs.forEach(function (btn) {
+            btn.classList.remove('btn-active')
+        })
+        console.log('clik')
+    }
 
-function removeActiveNavTabs() {
-    tabsContent.forEach(function (content) {
-        content.classList.remove('show')
-    })
     btnTabs.forEach(function (btn) {
-        btn.classList.remove('active')
+        btn.addEventListener('click', function () {
+            removeActiveNavTabs()
+            btn.classList.add('btn-active')
+            const id = btn.getAttribute('data-target-programs')
+            const content = document.getElementById(id)
+            content.classList.add('program-active')
+        })
+    })
+
+    function removeActiveContentBox() {
+        tabsContent.forEach(function (tabsContent) {
+            tabsContent.classList.remove('program-active__ccal')
+        })
+        btnNav.forEach(function (btnNav) {
+            btnNav.classList.remove('btn-active__ccal')
+        })
+    }
+
+    btnNav.forEach(function (btnNav) {
+        btnNav.addEventListener('click', function () {
+            removeActiveContentBox()
+            btnNav.classList.add('btn-active__ccal')
+            const id = btnNav.getAttribute('data-target-ccal')
+            const content = document.getElementById(id)
+            content.classList.add('program-active__ccal')
+        })
+    })
+
+    function removeActiveContentWeek() {
+        tabsContent.forEach(function (tabsContent) {
+            tabsContent.classList.remove('program-active__week')
+        })
+        btnWeek.forEach(function (btnWeek) {
+            btnWeek.classList.remove('btn-active__week')
+        })
+    }
+
+    btnWeek.forEach(function (btnWeek) {
+        btnWeek.addEventListener('click', function () {
+            removeActiveContentWeek()
+            btnWeek.classList.add('btn-active__week')
+            const id = btnWeek.getAttribute('data-target-week')
+            const content = document.getElementById(id)
+            content.classList.add('program-active__week')
+        })
     })
 }
 
-btnTabs.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-        removeActiveNavTabs()
-        btn.classList.add('active')
-        const id = btn.getAttribute('data-content-id')
-        const content = document.getElementById(id)
-        content.classList.add('show')
-    })
-})
+installProgramsTabs()
+
 
 
 // const installAccordion = () => {

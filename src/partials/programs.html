@@ -1,43 +1,46 @@
+<section class="relative overflow-x-clip w-full">
     <div class="max-w-xs md:max-w-2xl xl:max-w-6xl w-full ml-auto mr-auto mt-11 md:mt-12.5 xl:mt-25 mb-10 pl-5 pr-5 xl:pl-19.5 xl:pr-17.5 relative z-10">
-    <div class="tabs">
+    <div class="tabs xl:before:size-132 xl:before:border-30 xl:before:border-green-500/10 xl:before:absolute xl:before:top-108 xl:before:-right-88.25 xl:before:rounded-full xl:before:-z-10">
         <nav class="flex flex-col md:flex-row gap-3.5 md:gap-2.5 xl:gap-4.5 -ml-1 md:ml-0.25 xl:ml-1">
-            <button class="border-2 border-blue-200 hover:text-blue-100 hover:bg-green-400 hover:border-green-400 hover:shadow-xl w-70 md:w-84.75 xl:w-145 pt-2 pb-1.25 md:pt-1.75 md:pb-1.25 xl:pt-2.75 xl:pb-2.5 rounded-full bg-blue-200 text-sm xl:text-25 font-comfortaa font-normal" type="button" data-target="PP">Программы питания</button>
-            <button class="border-2 border-blue-200 hover:text-blue-100 hover:bg-green-400 hover:border-green-400 hover:shadow-xl w-70 md:w-84.75 xl:w-145 pt-2 pb-1 md:pt-1 md:pb-0.25 xl:pt-2.75 xl:pb-2.5 rounded-full bg-blue-200 text-sm xl:text-25 font-comfortaa font-normal" type="button" data-target="cp">Специальные программы</button>
+            <button class="border-2 border-blue-200 hover:text-blue-100 hover:bg-green-400 hover:border-green-400 hover:shadow-xl w-70 md:w-84.75 xl:w-145 pt-2 pb-1.25 md:pt-1.75 md:pb-1.25 xl:pt-2.75 xl:pb-2.5 rounded-full bg-blue-200 text-sm xl:text-25 font-comfortaa font-normal btn-active" type="button" data-target-programs="power-program">Программы питания</button>
+            <button class="border-2 border-blue-200 hover:text-blue-100 hover:bg-green-400 hover:border-green-400 hover:shadow-xl w-70 md:w-84.75 xl:w-145 pt-2 pb-1 md:pt-1 md:pb-0.25 xl:pt-2.75 xl:pb-2.5 rounded-full bg-blue-200 text-sm xl:text-25 font-comfortaa font-normal" type="button" data-target-programs="special-programs">Специальные программы</button>
         </nav>
-            <div id="pp" class="tab-content active">
+            <div id="power-program" class="tab-content hidden program-active">
                 <div class="mt-9.5 md:mt-10 xl:mt-16.75 -ml-1 md:ml-1 xl:ml-1.25">
-                    <nav class="nav-tabs flex flex-wrap gap-10.75 w-70 md:w-172 xl:w-294.5 md:gap-13.75 xl:gap-22.75 font-bold text-xs md:text-2xs xl:text-lg font-comfortaa">
+                    <nav class="nav-tabs flex flex-wrap gap-10.75 w-70 md:w-172 xl:w-300 md:gap-13.75 xl:gap-22.75 font-bold text-xs md:text-2xs xl:text-lg font-comfortaa">
                         <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400">
-                            <button type="button" class="uppercase" data-target="express-Fit">Express Fit</button>
+                            <button type="button" class="uppercase" data-target-ccal="express-Fit">Express Fit</button>
                             <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">800 ккал</p>
                         </div>
                         <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -ml-0.25 md:ml-0">
-                            <button type="button" class="uppercase" data-target="slim">slim</button>
+                            <button type="button" class="uppercase" data-target-ccal="slim">slim</button>
                             <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1000 ккал</p>
                         </div>
                         <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 ml-0.5 md:ml-0">
-                            <button type="button" class="uppercase" data-target="fitness">fitness</button>
+                            <button type="button" class="uppercase  btn-active__ccal" data-target-ccal="fitness">fitness</button>
                         <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1300 ккал</p>
                         </div>
                         <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7 ml-2.5 md:mt-0 md:ml-0.25 xl:ml-0">
-                            <button type="button" class="uppercase" data-target="balance">balance</button>
+                            <button type="button" class="uppercase" data-target-ccal="balance">balance</button>
                         <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1600 ккал</p>
                         </div>
                         <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7 -ml-0.5 md:mt-0 md:ml-0.25 xl:ml-0">
-                            <button type="button" class="uppercase" data-target="balance-pluse">balance +</button>
+                            <button type="button" class="uppercase" data-target-ccal="balance-pluse">balance +</button>
                         <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1800 ккал</p>
                         </div>
                         <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7 -ml-2.25 md:mt-0 md:ml-0.25 xl:ml-0">
-                            <button type="button" class="uppercase" data-target="strong">strong</button>
+                            <button type="button" class="uppercase" data-target-ccal="strong">strong</button>
                         <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">2000 ккал</p>
                         </div>
                         <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7.25 ml-29.5 md:mt-0 md:ml-0.25 xl:ml-0">
-                            <button type="button" class="uppercase" data-target="maxi-fit">maxi fit</button>
+                            <button type="button" class="uppercase" data-target-ccal="maxi-fit">maxi fit</button>
                         <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">2400 ккал</p>
                         </div>
                     </nav>
                     <div class="content-box">
-                        <div id="express-Fit" class="tab-content">
+                        <div id="express-Fit" class="tab-content"></div>
+                        <div id="slim" class="tab-content hidden"></div>
+                        <div id="fitness" class="tab-content hidden program-active__ccal">
                             <div class="flex flex-col md:flex-row gap-10">
                                 <div class="flex flex-col gap-10">
                                     <div class="w-70 md:w-55.25 xl:w-95 mt-9.5 md:mt-7 xl:mt-12.5 bg-green-400 text-blue-100 border-2 border-green-400 rounded-4xl md:-ml-0.75 xl:-ml-0.5">
@@ -95,16 +98,16 @@
                             </div>
                             <div class="tabs">
                                 <nav class="mt-0 md:mt-7 xl:mt-12 ml-0.5 md:-ml-6.75 xl:-ml-4.75 pl-4.5 md:pl-8 xl:pl-11.5 font-comfortaa font-bold text-sm md:text-2xs xl:text-25 flex gap-3.75 md:gap-11.75 xl:gap-17.5 bg-blue-100 rounded-4xl border-2 border-blue-100 shadow-xl w-69 md:w-114 xl:w-195">
-                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target="express-Fit__mon">пн</button>
-                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target="express-Fit__tue">вт</button>
-                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target="express-Fit__wed">ср</button>
-                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target="express-Fit__thu">чт</button>
-                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pl-0.25 xl:pl-0 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target="express-Fit__fri">пт</button>
-                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target="express-Fit__sat">сб</button>
-                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pl-0.25 xl:pl-0 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target="express-Fit__sun">вс</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5 btn-active__week" data-target-week="fitness__mon">пн</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="fitness__tue">вт</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="fitness__wed">ср</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="fitness__thu">чт</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pl-0.25 xl:pl-0 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="fitness__fri">пт</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="fitness__sat">сб</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pl-0.25 xl:pl-0 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="fitness__sun">вс</button>
                                 </nav>
                                 <div class="content-box">
-                                    <div id="express-Fit__mon" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195">
+                                    <div id="fitness__mon" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden program-active__week">
                                         <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
                                             <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
                                             <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
@@ -175,78 +178,472 @@
                                     </div>
                                 </div>
                                 <button type="button" class="pt-1.5 pb-0.75 mt-7.5 ml-14.75 w-40.75 font-comfortaa font-bold text-sm tracking-wide text-blue-100 bg-green-400 shadow-xl border-3 border-green-400 rounded-full hover:bg-blue-100 hover:text-green-400 md:hidden">Заказать</button>
-                                    <div id="express-Fit__tue" class="tab-content"></div>
-                                    <div id="express-Fit__wed" class="tab-content"></div>
-                                    <div id="express-Fit__thu" class="tab-content"></div>
-                                    <div id="express-Fit__fri" class="tab-content"></div>
-                                    <div id="express-Fit__sat" class="tab-content"></div>
-                                    <div id="express-Fit__sun" class="tab-content"></div>
+                                    <div id="fitness__tue" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden">
+                                        <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Завтрак</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">7:00 - 9:00</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Сырники с нежирной сметаной</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">180гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-1 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">2-й завтрак</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">10:00 - 12:00</span>
+                                                </div>
+                                                <div class="w-55.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.5"><p>- Груша и грецкий орех</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">150гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Обед</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">13:00 - 15:00</span>
+                                                </div>
+                                                <div class="w-57.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Запеченная индейка с киноа</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">250гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Полдник</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">16:00 - 17:30</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Натуральный питьевой йогурт</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">200мл</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Ужин</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">19:00 - 20:00</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Салат с тунцом и яйцом</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">200гр</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="fitness__wed" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden">
+                                       <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
+                                           <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                               <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
+                                                   <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Завтрак</h2>
+                                                   <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">7:00 - 9:00</span>
+                                               </div>
+                                               <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Овсяная каша с яблоком и корицей</p></div>
+                                               <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">220гр</span></div>
+                                           </div>
+                                           <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                               <div class="flex flex-row md:flex-col gap-5 md:gap-1 xl:gap-0">
+                                                   <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">2-й завтрак</h2>
+                                                   <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">10:00 - 12:00</span>
+                                               </div>
+                                               <div class="w-55.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.5"><p>- Тост с авокадо</p></div>
+                                               <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">1 шт</span></div>
+                                           </div>
+                                            <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Обед</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">13:00 - 15:00</span>
+                                                </div>
+                                                <div class="w-57.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Паста из твердых сортов с томатами</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">200гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Полдник</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">16:00 - 17:30</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Грейпфрут</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">150гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Ужин</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">19:00 - 20:00</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Филе хека с овощным рагу</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">230гр</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="fitness__thu" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden">
+                                        <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Завтрак</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">7:00 - 9:00</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Омлет с грибами и шпинатом</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">180гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-1 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">2-й завтрак</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">10:00 - 12:00</span>
+                                                </div>
+                                                <div class="w-55.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.5"><p>- Кедровые орехи и чернослив</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">40гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Обед</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">13:00 - 15:00</span>
+                                                </div>
+                                                <div class="w-57.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Говяжьи тефтели с гречкой</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">260гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Полдник</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">16:00 - 17:30</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Ряженка</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">200мл</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Ужин</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">19:00 - 20:00</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Творог с медом и корицей</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">150гр</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div id="fitness__fri" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden">
+                                        <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Завтрак</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">7:00 - 9:00</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Рисовая каша с курагой</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">200гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-1 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">2-й завтрак</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">10:00 - 12:00</span>
+                                                </div>
+                                                <div class="w-55.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.5"><p>- Банан</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">1 шт</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Обед</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">13:00 - 15:00</span>
+                                                </div>
+                                                <div class="w-57.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Запеченная скумбрия с лимоном</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">180гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Полдник</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">16:00 - 17:30</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Яблоко печеное</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">150гр</span></div>
+                                            </div>
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                    <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Ужин</h2>
+                                                    <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">19:00 - 20:00</span>
+                                                </div>
+                                                <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Куриный рулет с сыром</p></div>
+                                                <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">160гр</span></div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                            <div id="fitness__sat" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden">
+                                            <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
+                                                <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Завтрак</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">7:00 - 9:00</span>
+                                                    </div>
+                                                    <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Фруктовый салат с йогуртом</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">200гр</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-1 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">2-й завтрак</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">10:00 - 12:00</span>
+                                                    </div>
+                                                    <div class="w-55.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.5"><p>- Галетное печенье</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">3 шт</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Обед</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">13:00 - 15:00</span>
+                                                    </div>
+                                                    <div class="w-57.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Котлеты из индейки с пюре из брокколи</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">250гр</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Полдник</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">16:00 - 17:30</span>
+                                                    </div>
+                                                    <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Смузи ягодный</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">200мл</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Ужин</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">19:00 - 20:00</span>
+                                                    </div>
+                                                    <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Запеченный омлет с кабачками</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">180гр</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div id="fitness__sun" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden">
+                                            <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
+                                                <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Завтрак</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">7:00 - 9:00</span>
+                                                    </div>
+                                                    <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Яичница с томатами</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">150гр</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-1 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">2-й завтрак</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">10:00 - 12:00</span>
+                                                    </div>
+                                                    <div class="w-55.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.5"><p>- Горсть фундука</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">30гр</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Обед</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">13:00 - 15:00</span>
+                                                    </div>
+                                                    <div class="w-57.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Запеченная курица с кус-кусом</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">240гр</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Полдник</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">16:00 - 17:30</span>
+                                                    </div>
+                                                    <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Творожное суфле</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">100гр</span></div>
+                                                </div>
+                                                <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                                    <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                        <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Ужин</h2>
+                                                        <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">19:00 - 20:00</span>
+                                                    </div>
+                                                    <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5"><p>- Запеченная треска с салатом</p></div>
+                                                    <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5"><span class="hidden md:block">220гр</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                             </div>
                             </div>
                         </div>
-                        <div id="slim" class="tab-content"></div>
-                        <div id="fitness" class="tab-content"></div>
-                        <div id="balance" class="tab-content"></div>
-                        <div id="balance-pluse" class="tab-content"></div>
-                        <div id="strong" class="tab-content"></div>
-                        <div id="maxi-fit" class="tab-content"></div>
+                        <div id="balance" class="tab-content hidden"></div>
+                        <div id="balance-pluse" class="tab-content hidden"></div>
+                        <div id="strong" class="tab-content hidden"></div>
+                        <div id="maxi-fit" class="tab-content hidden"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="special-programs" class="tab-content hidden">
+                <div class="mt-9.5 md:mt-10 xl:mt-16.75 -ml-1 md:ml-1 xl:ml-1.25">
+                    <nav class="nav-tabs flex flex-wrap gap-10.75 w-70 md:w-172 xl:w-300 md:gap-13.75 xl:gap-22.75 font-bold text-xs md:text-2xs xl:text-lg font-comfortaa">
+                        <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 btn-active__ccal" data-target-ccal="express-Fit-special">
+                            <button type="button" class="uppercase">Express Fit</button>
+                            <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">800 ккал</p>
+                        </div>
+                        <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -ml-0.25 md:ml-0 xl:text-center" data-target-ccal="slim-special-special">
+                            <button type="button" class="uppercase">slim</button>
+                            <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1000 ккал</p>
+                        </div>
+                        <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 ml-0.5 md:ml-0">
+                            <button type="button" class="uppercase" data-target-ccal="fitness-special-special">fitness</button>
+                        <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1300 ккал</p>
+                        </div>
+                        <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7 ml-2.5 md:mt-0 md:ml-0.25 xl:ml-0">
+                            <button type="button" class="uppercase" data-target-ccal="balance-special-special">balance</button>
+                        <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1600 ккал</p>
+                        </div>
+                        <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7 -ml-0.5 md:mt-0 md:ml-0.25 xl:ml-0">
+                            <button type="button" class="uppercase" data-target-ccal="balance-pluse-special-special">balance +</button>
+                        <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">1800 ккал</p>
+                        </div>
+                        <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7 -ml-2.25 md:mt-0 md:ml-0.25 xl:ml-0">
+                            <button type="button" class="uppercase" data-target-ccal="strong-special-special">strong</button>
+                        <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">2000 ккал</p>
+                        </div>
+                        <div class="flex flex-col gap-0.5 md:gap-1 xl:gap-0.5 hover:text-green-400 -mt-7.25 ml-29.5 md:mt-0 md:ml-0.25 xl:ml-0">
+                            <button type="button" class="uppercase" data-target-ccal="maxi-fit-special-special">maxi fit</button>
+                        <p class="font-normal font-montserrat text-2xs md:text-3xs xl:text-sm text-center">2400 ккал</p>
+                        </div>
+                    </nav>
+                    <div class="content-box">
+                        <div id="express-Fit-special" class="tab-content hidden program-active__ccal">
+                            <div class="flex flex-col md:flex-row gap-10">
+                                <div class="flex flex-col gap-10">
+                                    <div class="w-70 md:w-55.25 xl:w-95 mt-9.5 md:mt-7 xl:mt-12.5 bg-green-400 text-blue-100 border-2 border-green-400 rounded-4xl md:-ml-0.75 xl:-ml-0.5">
+                                        <div class="flex gap-3.5 md:gap-3.5 xl:gap-5.25 mt-10">
+                                            <h2 class="font-comfortaa font-bold text-sm xl:text-25 uppercase pl-7.25 md:pl-7.5 xl:pl-12.25 -mt-6.25 md:-mt-6.25 xl:-mt-3.75">fitness</h2>
+                                        <p class="font-montserrat text-2xs xl:text-lg -mt-5.75 md:-mt-5.75 xl:-mt-2.5">1300 ккал</p>
+                                        </div>
+                                        <p class="max-w-55 md:max-w-40.75 xl:max-w-70 font-montserrat text-2xs xl:text-base leading-3 md:leading-3 xl:leading-5 ml-7.25 md:ml-7.5 xl:ml-12.25 mt-1 md:mt-1 xl:mt-3.5 pb-5.5 md:pb-6.25 xl:pb-12.5">Программа здорового питания Express Fit. Идеально для: похудения в кратчайшие сроки, повышения энергии и сил, снижения веса при сидячем образе жизни.</p>
+                                    </div>
+                                <div class="-mt-5.25 md:-mt-2.75 xl:mt-2 ml-5.5 md:ml-2.5 xl:ml-4.5 flex flex-col gap-1.75 md:gap-1.75 xl:gap-2.75 font-montserrat text-2xs md:text-3xs xl:text-15">
+                                    <div class="flex gap-13.75 md:gap-9.75 xl:gap-10">
+                                        <h3 class="w-20.25 md:w-16.75 xl:w-35.75">Тестовый день</h3>
+                                        <div class="flex gap-5.5 md:gap-7.25 xl:gap-11.25">
+                                            <span class="line-through">510 грн</span>
+                                            <span>357 грн</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-13.75 md:gap-9.75 xl:gap-10 xl:-mt-0.25">
+                                        <h3 class="w-20.25 md:w-16.75 xl:w-35.75">1 день</h3>
+                                        <div class="flex gap-5.5 md:gap-7.25 xl:gap-11.25">
+                                            <span class="opacity-0 line-through">510 грн</span>
+                                            <span>510 грн</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-13.75 md:gap-9.75 xl:gap-10 md:mt-0.25 xl:mt-0">
+                                        <h3 class="w-20.25 md:w-16.75 xl:w-35.75">от 7 дней</h3>
+                                        <div class="flex gap-5.5 md:gap-7.25 xl:gap-11.25">
+                                            <span class="line-through">510 грн</span>
+                                            <span>490 грн</span>
+                                        </div>                                        
+                                    </div>
+                                    <div class="flex gap-13.75 md:gap-9.75 xl:gap-10 xl:-mt-0.25">
+                                        <h3 class="w-20.25 md:w-16.75 xl:w-35.75">от 14 дней</h3>
+                                        <div class="flex gap-5.5 md:gap-7.25 xl:gap-11.25">
+                                            <span class="line-through">510 грн</span>
+                                            <span>470 грн</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-13.75 md:gap-9.75 xl:gap-10">
+                                        <h3 class="w-20.25 md:w-16.75 xl:w-35.75">от 30 дней</h3>
+                                        <div class="flex gap-5.5 md:gap-7.25 xl:gap-11.25">
+                                            <span class="line-through">510 грн</span>
+                                            <span>445 грн</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-16 md:gap-10.75 xl:gap-10 xl:-mt-0.25">
+                                        <h3 class="w-20.25 md:w-17.75 xl:w-39.25">Завтрак и ужин</h3>
+                                        <div class="flex gap-7.25 md:gap-8.5 xl:gap-13.75">
+                                            <span>-15%</span>
+                                            <span>433 грн</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="pt-1.5 md:pt-1.5 xl:pt-2.25 pb-0.75 md:pb-0.75 xl:pb-1.5 -mt-4.25 md:-mt-2.75 xl:mt-2 ml-14.75 md:ml-6.75 xl:ml-12 w-40.75 xl:w-70 font-comfortaa font-bold text-sm xl:text-26 tracking-wide text-blue-100 bg-green-400 shadow-xl border-3 border-green-400 rounded-full hover:bg-blue-100 hover:text-green-400">Заказать</button>
+                            </div>
+                            <div class="tabs">
+                                <nav class="mt-0 md:mt-7 xl:mt-12 ml-0.5 md:-ml-6.75 xl:-ml-4.75 pl-4.5 md:pl-8 xl:pl-11.5 font-comfortaa font-bold text-sm md:text-2xs xl:text-25 flex gap-3.75 md:gap-11.75 xl:gap-17.5 bg-blue-100 rounded-4xl border-2 border-blue-100 shadow-xl w-69 md:w-114 xl:w-195">
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5 btn-active__week" data-target-week="express-Fit__mon-special">пн</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="express-Fit__tue-special">вт</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="express-Fit__wed-special">ср</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="express-Fit__thu-special">чт</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pl-0.25 xl:pl-0 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="express-Fit__fri-special">пт</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="express-Fit__sat-special">сб</button>
+                                    <button type="button" class="uppercase hover:text-green-400 pb-2.25 md:pl-0.25 xl:pl-0 md:pb-1.5 xl:pb-1 pt-3 md:pt-2 xl:pt-2.5" data-target-week="express-Fit__sun-special">вс</button>
+                                </nav>
+                                <div class="content-box">
+                                    <div id="express-Fit__mon-special" class="tab-content mt-5 -mr-3.25 md:mr-0 md:mt-2.75 xl:mt-5 md:-ml-7 xl:-ml-5 pb-3.5 md:pb-5.5 xl:pb-8.75 text-xs md:text-2xs xl:text-lg font-light font-montserrat bg-blue-100 border-2 border-blue-100 shadow-xl rounded-4xl xl:w-195 hidden program-active__week">
+                                        <div class="flex flex-col gap-3.75 md:gap-7.75 xl:gap-11.25 mt-4.25 md:mt-4 xl:mt-7 ml-4.5 md:ml-7.25 xl:ml-12.25">
+                                            <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                            <div class="flex flex-row md:flex-col gap-5.25 md:gap-0.5 xl:gap-0">
+                                                <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Завтрак</h2>
+                                                <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">7:00 - 9:00</span>
+                                            </div>
+                                            <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5">
+                                                <p>- Фриттата с сыром и кабачками</p>
+                                            </div>
+                                            <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5">
+                                                <span class="hidden md:block">170гр</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                            <div class="flex flex-row md:flex-col gap-5 md:gap-1 xl:gap-0">
+                                                <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">2-й завтрак</h2>
+                                            <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">10:00 - 12:00</span>
+                                            </div>
+                                            <div class="w-55.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.5">
+                                                <p>- Фермерский йогурт</p>
+                                                <p>- Полезное печенье из сухофруктов и орехов</p>
+                                            </div>
+                                            <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5">
+                                                <span class="hidden md:block">200гр</span>
+                                                <span class="hidden md:block">2 шт</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col md:flex-row gap-1.75 md:gap-8 xl:gap-13.75">
+                                            <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Обед</h2>
+                                            <span class="md:text-3xs xl:text-lg mt-0.75 md:mt-0">13:00 - 15:00</span>
+                                            </div>
+                                            <div class="w-57.5 md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5">
+                                                <p>- Люля-кебаб из индейки</p>
+                                                <p>- Летний салат с маслинами и сыром</p>
+                                            </div>
+                                            <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5">
+                                                <span class="hidden md:block">100гр</span>
+                                                <span class="hidden md:block">100гр</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                            <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Полдник</h2>
+                                            <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">16:00 - 17:30</span>
+                                            </div>
+                                            <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5">
+                                                <p>- Творожное суфле с какао и вишей</p>
+                                            </div>
+                                            <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.25 xl:mt-0.5 md:leading-3 xl:leading-5.5">
+                                                <span class="hidden md:block">100гр</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col md:flex-row gap-2 md:gap-8 xl:gap-13.75">
+                                            <div class="flex flex-row md:flex-col gap-5 md:gap-0.75 xl:gap-0">
+                                                <h2 class="font-normal text-sm md:text-2xs xl:text-xl md:w-17.25 xl:w-29.75">Ужин</h2>
+                                            <span class="md:text-3xs xl:text-lg mt-1 md:mt-0">19:00 - 20:00</span>
+                                            </div>
+                                            <div class="md:w-61.25 xl:w-105 md:leading-3 xl:leading-5.5 md:mt-0.25 xl:mt-0.5">
+                                                <p>- Рыбный терен</p>
+                                                <p>- Овощи гриль</p>
+                                            </div>
+                                            <div class="flex flex-col md:-ml-3.25 xl:-ml-6 md:mt-0.5 md:leading-3 xl:leading-5.5">
+                                                <span class="hidden md:block">100гр</span>
+                                                <span class="hidden md:block">150гр</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="pt-1.5 pb-0.75 mt-7.5 ml-14.75 w-40.75 font-comfortaa font-bold text-sm tracking-wide text-blue-100 bg-green-400 shadow-xl border-3 border-green-400 rounded-full hover:bg-blue-100 hover:text-green-400 md:hidden">Заказать</button>
+                                    <div id="express-Fit__tue-special" class="tab-content hidden"></div>
+                                    <div id="express-Fit__wed-special" class="tab-content hidden"></div>
+                                    <div id="express-Fit__thu-special" class="tab-content hidden"></div>
+                                    <div id="express-Fit__fri-special" class="tab-content hidden"></div>
+                                    <div id="express-Fit__sat-special" class="tab-content hidden"></div>
+                                    <div id="express-Fit__sun-special" class="tab-content hidden"></div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div id="slim-special" class="tab-content hidden"></div>
+                        <div id="fitness-special" class="tab-content hidden"></div>
+                        <div id="balance-special" class="tab-content hidden"></div>
+                        <div id="balance-pluse-special" class="tab-content hidden"></div>
+                        <div id="strong-special" class="tab-content hidden"></div>
+                        <div id="maxi-fit-special" class="tab-content hidden"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div>
-        <nav>
-            <button class="btn active" data-content-id="content-1">button-1</button>
-            <button class="btn" data-content-id="content-2">button-2</button>
-            <button class="btn" data-content-id="content-3">button-3</button>
-        </nav>
-        <div>
-            <div>
-                <div class="tab-content show" id="content-1"><h3 class="text-2xl">1</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque possimus autem
-                inventore est tempora voluptate, molestiae rerum, quae praesentium facilis commodi deleniti labore, modi
-                esse et error optio ad corrupti ex vero quo odit. Hic labore error commodi accusantium, doloribus sed
-                cum deleniti. Tempora ducimus quibusdam maxime incidunt dolores facere?</div>
-            <div class="tab-content" id="content-2"><h3 class="text-2xl">2</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque possimus autem
-                inventore est tempora voluptate, molestiae rerum, quae praesentium facilis commodi deleniti labore, modi
-                esse et error optio ad corrupti ex vero quo odit. Hic labore error commodi accusantium, doloribus sed
-                cum deleniti. Tempora ducimus quibusdam maxime incidunt dolores facere?</div>
-            <div class="tab-content" id="content-3"><h3 class="text-2xl">3</h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque possimus autem
-                inventore est tempora voluptate, molestiae rerum, quae praesentium facilis commodi deleniti labore, modi
-                esse et error optio ad corrupti ex vero quo odit. Hic labore error commodi accusantium, doloribus sed
-                cum deleniti. Tempora ducimus quibusdam maxime incidunt dolores facere?</div>
-            </div>
-        </div>
-    </div> -->
+</section>
