@@ -219,3 +219,21 @@ input[type="checkbox"] {
 .program-active__week {
     display: block;
 }
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.swiper-wrapper .slide-width {
+    width: 380px;
+    box-shadow: 0 0 40px 0 #5656564d;
+    border-radius: 30px;
+    @media only screen and (min-width: 768px) and (max-width: 1279.9px) {
+            width: 270px;
+        }
+        @media only screen and (max-width: 767.9px) {
+            width: 230px;    
+        }
+}

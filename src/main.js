@@ -30,11 +30,31 @@ const swiper = new Swiper('.swiper', {
             </div>`;
         }
     },
-
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+});
+
+const swiperCarusel = new Swiper(".mySwiper", {
+  loop: true,
+  speed: 3000,
+  allowTouchMove: true,
+  slidesPerView: 'auto',
+  spaceBetween: 0,
+  centeredSlides: false,
+  
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  
+  freeMode: {
+    enabled: true,
+    momentum: false,
+  },
+  
+  loopedSlides: 6,     
 });
 
 const languageItem = document.querySelectorAll('.language-item')
