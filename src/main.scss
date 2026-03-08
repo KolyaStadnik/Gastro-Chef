@@ -199,12 +199,21 @@ input[type="checkbox"] {
     font-weight: 700;
 }
 
-.btn-active__ccal {
+.btn-active__ccal-programs {
     color: #64D370;
     display: block;
 }
 
-.btn-active__week {
+.btn-active__week-programs {
+    color: #64D370;
+}
+
+.btn-active__ccal-special {
+    color: #64D370;
+    display: block;
+}
+
+.btn-active__week-special {
     color: #64D370;
 }
 
@@ -217,6 +226,14 @@ input[type="checkbox"] {
 }
 
 .program-active__week {
+    display: block;
+}
+
+.special-active__ccal {
+    display: block;
+}
+
+.special-active__week {
     display: block;
 }
 

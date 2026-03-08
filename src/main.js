@@ -130,73 +130,152 @@ network.addEventListener('click', () => {
     passivenetworks.classList.toggle('hidden')
 })
 
-
 const installProgramsTabs = () => {
-    const btnTabs = document.querySelectorAll('[data-target-programs]')
-    const btnNav = document.querySelectorAll('[data-target-ccal]')
-    const btnWeek = document.querySelectorAll('[data-target-week]')
-    const tabsContent = document.querySelectorAll('.tab-content')
+    const setupTabs = (btnSelector, contentSelector, btnActiveClass, contentActiveClass, dataAttr) => {
+        const buttons = document.querySelectorAll(btnSelector);
+        const contents = document.querySelectorAll(contentSelector);
 
-    function removeActiveNavTabs() {
-        tabsContent.forEach(function (content) {
-            content.classList.remove('program-active')
-        })
-        btnTabs.forEach(function (btn) {
-            btn.classList.remove('btn-active')
-        })
-        console.log('clik')
-    }
+        if (buttons.length === 0) return;
 
-    btnTabs.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            removeActiveNavTabs()
-            btn.classList.add('btn-active')
-            const id = btn.getAttribute('data-target-programs')
-            const content = document.getElementById(id)
-            content.classList.add('program-active')
-        })
-    })
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove(btnActiveClass));
+                contents.forEach(c => c.classList.remove(contentActiveClass));
 
-    function removeActiveContentBox() {
-        tabsContent.forEach(function (tabsContent) {
-            tabsContent.classList.remove('program-active__ccal')
-        })
-        btnNav.forEach(function (btnNav) {
-            btnNav.classList.remove('btn-active__ccal')
-        })
-    }
+                btn.classList.add(btnActiveClass);
+                const id = btn.getAttribute(dataAttr);
+                const targetContent = document.getElementById(id);
 
-    btnNav.forEach(function (btnNav) {
-        btnNav.addEventListener('click', function () {
-            removeActiveContentBox()
-            btnNav.classList.add('btn-active__ccal')
-            const id = btnNav.getAttribute('data-target-ccal')
-            const content = document.getElementById(id)
-            content.classList.add('program-active__ccal')
-        })
-    })
+                if (targetContent) {
+                    targetContent.classList.add(contentActiveClass);
+                }
+            });
+        });
+    };
+    setupTabs('[data-target-programs]', '.tab-content', 'btn-active', 'program-active', 'data-target-programs'); 
 
-    function removeActiveContentWeek() {
-        tabsContent.forEach(function (tabsContent) {
-            tabsContent.classList.remove('program-active__week')
-        })
-        btnWeek.forEach(function (btnWeek) {
-            btnWeek.classList.remove('btn-active__week')
-        })
-    }
+    setupTabs('[data-target-ccal-programs]', '.program-tab-content', 'btn-active__ccal-programs', 'program-active__ccal', 'data-target-ccal-programs');
 
-    btnWeek.forEach(function (btnWeek) {
-        btnWeek.addEventListener('click', function () {
-            removeActiveContentWeek()
-            btnWeek.classList.add('btn-active__week')
-            const id = btnWeek.getAttribute('data-target-week')
-            const content = document.getElementById(id)
-            content.classList.add('program-active__week')
-        })
-    })
-}
+    setupTabs('[data-target-week-programs]', '.program-tab-content', 'btn-active__week-programs', 'program-active__week', 'data-target-week-programs');
 
-installProgramsTabs()
+    setupTabs('[data-target-ccal-special]', '.special-tab-content', 'btn-active__ccal-special', 'special-active__ccal', 'data-target-ccal-special');
+    
+    setupTabs('[data-target-week-special]', '.special-tab-content', 'btn-active__week-special', 'special-active__week', 'data-target-week-special');
+};
+
+document.querySelectorAll('.tabs').length > 0 ? installProgramsTabs() : null
+
+
+
+// const installProgramsTabs = () => {
+//     const btnTabs = document.querySelectorAll('[data-target-programs]')
+//     const btnNavPrograms = document.querySelectorAll('[data-target-ccal-programs]')
+//     const btnWeekPrograms = document.querySelectorAll('[data-target-week-programs]')
+//     const btnNavSpecial = document.querySelectorAll('[data-target-ccal-special]')
+//     const btnWeekSpecial = document.querySelectorAll('[data-target-week-special]')
+//     const tabsContent = document.querySelectorAll('.tab-content')
+//     const tabsContentCcalProgram = document.querySelectorAll('.program-tab-content')
+//     const tabsContentWeekProgram = document.querySelectorAll('.program-tab-content')
+//     const tabsContentCcalSpecial = document.querySelectorAll('.special-tab-content')
+//     const tabsContentWeekSpecial = document.querySelectorAll('.special-tab-content')
+
+//     function removeActiveNavTabs() {
+//         tabsContent.forEach(function (content) {
+//             content.classList.remove('program-active')
+//         })
+//         btnTabs.forEach(function (btn) {
+//             btn.classList.remove('btn-active')
+//         })
+//     }
+
+//     btnTabs.forEach(function (btn) {
+//         btn.addEventListener('click', function () {
+//             removeActiveNavTabs()
+//             btn.classList.add('btn-active')
+//             const id = btn.getAttribute('data-target-programs')
+//             const content = document.getElementById(id)
+//             content.classList.add('program-active')
+//         })
+//     })
+
+//     function removeActiveContentBoxPrograms() {
+//         tabsContentCcalProgram.forEach(function (tabsContent) {
+//             tabsContent.classList.remove('program-active__ccal')
+//         })
+//         btnNavPrograms.forEach(function (btnNavPrograms) {
+//             btnNavPrograms.classList.remove('btn-active__ccal-programs')
+//         })
+//     }
+
+//     btnNavPrograms.forEach(function ( btnNavPrograms) {
+//          btnNavPrograms.addEventListener('click', function () {
+//             removeActiveContentBoxPrograms()
+//              btnNavPrograms.classList.add('btn-active__ccal-programs')
+//             const id = btnNavPrograms.getAttribute('data-target-ccal-programs')
+//             const content = document.getElementById(id)
+//             content.classList.add('program-active__ccal')
+//         })
+//     })
+
+//     function removeActiveContentWeekPrograms() {
+//         tabsContentWeekProgram.forEach(function (tabsContentWeekProgram) {
+//             tabsContentWeekProgram.classList.remove('program-active__week')
+//         })
+//         btnWeekPrograms.forEach(function (btnWeekPrograms) {
+//             btnWeekPrograms.classList.remove('btn-active__week-programs')
+//         })
+//     }
+
+//     btnWeekPrograms.forEach(function (btnWeekPrograms) {
+//         btnWeekPrograms.addEventListener('click', function () {
+//             removeActiveContentWeekPrograms()
+//             btnWeekPrograms.classList.add('btn-active__week-programs')
+//             const id = btnWeekPrograms.getAttribute('data-target-week-programs')
+//             const content = document.getElementById(id)
+//             content.classList.add('program-active__week')
+//         })
+//     })
+
+//     function removeActiveContentBoxSpecial() {
+//         tabsContentCcalSpecial.forEach(function (tabsContentCcalSpecial) {
+//             tabsContentCcalSpecial.classList.remove('special-active__ccal')
+//         })
+//         btnNavSpecial.forEach(function (btnWeekSpecial) {
+//             btnWeekSpecial.classList.remove('btn-active__ccal-special')
+//         })
+//     }
+
+//     btnNavSpecial.forEach(function (btnNavSpecial) {
+//         btnNavSpecial.addEventListener('click', function () {
+//             removeActiveContentBoxSpecial()
+//             btnNavSpecial.classList.add('btn-active__ccal-special')
+//             const id = btnNavSpecial.getAttribute('data-target-ccal-special')
+//             const content = document.getElementById(id)
+//             content.classList.add('special-active__ccal')
+//         })
+//     })
+
+//     function removeActiveContentWeekSpecial() {
+//         tabsContentWeekSpecial.forEach(function (tabsContentWeekSpecial) {
+//             tabsContentWeekSpecial.classList.remove('special-active__week')
+//         })
+//         btnWeekSpecial.forEach(function (btnWeekSpecial) {
+//             btnWeekSpecial.classList.remove('btn-active__week-special')
+//         })
+//     }
+
+//     btnWeekSpecial.forEach(function (btnWeekSpecial) {
+//         btnWeekSpecial.addEventListener('click', function () {
+//             removeActiveContentWeekSpecial()
+//             btnWeekSpecial.classList.add('btn-active__week-special')
+//             const id = btnWeekSpecial.getAttribute('data-target-week-special')
+//             const content = document.getElementById(id)
+//             content.classList.add('special-active__week')
+//         })
+//     })
+// }
+
+// (document.querySelectorAll('.tabs').length > 0) ? installProgramsTabs() : null
 
 
 

@@ -5,7 +5,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(./src/assets/fonts/Comfortaa-Light.ttf) format('truetype');
+    src: url("/src/assets/fonts/Comfortaa-Light.ttf") format('truetype');
 }
 
 @font-face {
@@ -13,7 +13,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(./src/assets/fonts/Comfortaa-Regular.ttf) format('truetype');
+    src: url("/src/assets/fonts/Comfortaa-Regular.ttf") format('truetype');
 }
 
 @font-face {
@@ -21,7 +21,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(./src/assets/fonts/Comfortaa-Bold.ttf) format('truetype');
+    src: url("/src/assets/fonts/Comfortaa-Bold.ttf") format('truetype');
 }
 
 @font-face {
@@ -29,7 +29,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(./src/assets/fonts/Montserrat-Bold.ttf) format('truetype');
+    src: url("/src/assets/fonts/Montserrat-Bold.ttf") format('truetype');
 }
 
 @font-face {
@@ -37,7 +37,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(./src/assets/fonts/Montserrat-Light.ttf) format('truetype');
+    src: url("/src/assets/fonts/Montserrat-Light.ttf") format('truetype');
 }
 
 @font-face {
@@ -45,7 +45,7 @@
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url(./src/assets/fonts/Montserrat-Medium.ttf) format('truetype');
+    src: url("/src/assets/fonts/Montserrat-Medium.ttf") format('truetype');
 }
 
 @font-face {
@@ -53,12 +53,12 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(./src/assets/fonts/Montserrat-Regular.ttf) format('truetype');
+    src: url("/src/assets/fonts/Montserrat-Regular.ttf") format('truetype');
 }
 
 @theme {
     --font-comfortaa: 'Comfortaa', sans-serif;
-    --font-montserrat: 'Montserrat', sans-serif;
+    --font-montserrat: 'Montserrat' , sans-serif;
     --color-green-400: #64D370; /*hover*/
     --color-green-500: #26F03A; /*10% #26F03A1a*/
     --color-green-600: #3D9646; /*active*/
