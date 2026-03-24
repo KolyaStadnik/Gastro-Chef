@@ -75,35 +75,39 @@ languageItem.forEach(function (element) {
     })
 })
 
-const categorylink = document.querySelectorAll('.category-link')
+const categorylinks = document.querySelectorAll('.category-link');
 
-function remuveActiveClassesNavigationPanel() {
-    categorylink.forEach(item => {
-        item.classList.add('xl:w-17.5')
-        item.classList.add('w-10')
-        item.classList.remove('md:w-auto')
-        item.classList.remove('text-green-400')
-        item.querySelector('span').classList.add('md:hidden')
-    })
+function removeActiveClassesNavigationPanel() {
+    categorylinks.forEach(item => {
+        item.classList.remove('text-green-400');
+        if (window.innerWidth >= 768) {
+            item.classList.add('w-10', 'xl:w-17.5');
+            item.classList.remove('md:w-auto');
+            const span = item.querySelector('span');
+            if (span) span.classList.add('md:hidden');
+        }
+    });
 }
 
-categorylink.forEach(item => {
+categorylinks.forEach(item => {
     item.addEventListener('click', (event) => {
-        event.preventDefault()
-        remuveActiveClassesNavigationPanel()
-        item.classList.remove('xl:w-17.5')
-        item.classList.remove('w-10')
-        item.classList.add('md:w-auto')
-        item.classList.add('text-green-400')
-        item.querySelector('span').classList.remove('md:hidden')
-    })
-})
+        event.preventDefault();
+        removeActiveClassesNavigationPanel();
+        item.classList.add('text-green-400');
+        if (window.innerWidth >= 768) {
+            item.classList.remove('w-10', 'xl:w-17.5');
+            item.classList.add('md:w-auto');
+            const span = item.querySelector('span');
+            if (span) span.classList.remove('md:hidden');
+        }
+    });
+});
 
-document.addEventListener('click', () => {
-    if(!event.target.closest('.category-link')) {
-        remuveActiveClassesNavigationPanel()
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.category-link')) {
+        removeActiveClassesNavigationPanel();
     }
-})
+});
 
 // const link = document.querySelector('.category-link')
 
