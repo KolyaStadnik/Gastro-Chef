@@ -59,6 +59,51 @@ const swiperCarusel = new Swiper(".mySwiper", {
 
 const languageItem = document.querySelectorAll('.language-item')
 
+const swiperBlog = new Swiper('.swiperBlog', {
+    loop: true,
+    speed: 500,
+    pagination: {
+        el: '.swiper-pagination-top',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return `<span class="${className}">${index + 1}</span>`;
+        },
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    on: {
+        init: function () {
+            const paginationHTML = document.querySelector('.swiper-pagination-top').innerHTML;
+            const bottomPagination = document.querySelector('.swiper-pagination-bottom');
+            if (bottomPagination) {
+                bottomPagination.innerHTML = paginationHTML;
+            }
+        },
+        slideChange: function () {
+            const activeIndex = this.realIndex;
+            const bottomBullets = document.querySelectorAll('.swiper-pagination-bottom .swiper-pagination-bullet');
+            bottomBullets.forEach((bullet, idx) => {
+                if (idx === activeIndex) {
+                    bullet.classList.add('swiper-pagination-bullet-active');
+                } else {
+                    bullet.classList.remove('swiper-pagination-bullet-active');
+                }
+            });
+        }
+    }
+});
+
+document.querySelector('.swiper-pagination-bottom').addEventListener('click', (e) => {
+    if (e.target.classList.contains('swiper-pagination-bullet')) {
+        const bullets = Array.from(e.target.parentElement.children);
+        const index = bullets.indexOf(e.target);
+        swiperBlog.slideToLoop(index);
+    }
+});
+
+
 function remuveActiveClassesLanguagePanel() {
     languageItem.forEach(function (item) {
         item.classList.remove('bg-green-400')

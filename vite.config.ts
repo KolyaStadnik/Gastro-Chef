@@ -57,6 +57,24 @@ function copyImagesPlugin() {
   }
 }
 
+function fixFontUrlsInCssPlugin() {
+  return {
+    name: 'fix-font-urls-in-css',
+    generateBundle(_, bundle: any) {
+      for (const asset of Object.values(bundle) as any[]) {
+        if (asset.type !== 'asset') continue
+        if (!asset.fileName || !asset.fileName.endsWith('.css')) continue
+        if (typeof asset.source !== 'string') continue
+
+        asset.source = asset.source.replace(
+          /url\((['"]?)\.\/fonts\//g,
+          'url($1../fonts/'
+        )
+      }
+    }
+  }
+}
+
 export default defineConfig({
   base: './',
 
@@ -110,7 +128,7 @@ export default defineConfig({
     }),
 
     FullReload(['src/partials/**/*']),
-
-    copyImagesPlugin()
+    copyImagesPlugin(),
+    fixFontUrlsInCssPlugin()
   ]
 })

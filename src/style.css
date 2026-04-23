@@ -68,6 +68,8 @@
     --color-blue-200: #DEE6EE;
     --color-blue-300: #F4F9FE;
     --color-blue-400: #E5E5E5;
+    --color-blue-500: #B5C2CE;
+    --color-blue-600: #DEE6EE;
     --color-grey-950: #020202;
     --container-5xl: calc(70.3rem + 160px);
     --container-6xl: calc(73.75rem + 160px);
@@ -150,6 +152,12 @@
 .burger__icon::after {
     top: 14px;
 }
+
+.margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* .swiper .swiper-pagination-bullet-active-prev-prev, 
 .swiper .swiper-pagination-bullet-active-prev,

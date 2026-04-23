@@ -254,3 +254,102 @@ input[type="checkbox"] {
             width: 230px;    
         }
 }
+
+.swiper-navigation .swiper-pagination__style-top .swiper-pagination-bullet,
+.swiper-navigation .swiper-pagination__style-bottom .swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    background-color: #DEE6EE;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    z-index: 10;
+
+    @media only screen and (max-width: 1279.9px) {
+            width: 22px;
+            height: 22px;
+            font-size: 12px;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4ade80 !important;
+    color: white;
+}
+
+.swiper-navigation .blog__prev .arrow_left,
+.swiper-navigation .blog__next .arrow_right {
+    color: black;
+    width: 24px;
+    height: 24px;
+    margin-left: -2px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    pointer-events: auto;
+
+    @media only screen and (min-width: 768px) and (max-width: 1279.9px) {
+        margin-left: -6px;
+        width: 17px;
+        height: 16px
+    }
+    
+    @media only screen and (max-width: 767.9px) {
+        width: 17px;
+        height: 16px;
+        margin-left: -6px; 
+    }
+    
+}
+
+.swiper-navigation .blog__next .arrow_right {
+    margin-left: 2px;
+    margin-top: 1px;
+
+    @media only screen and (max-width: 1279.9px) {
+        margin-left: 6px;
+    }  
+}
+
+.arrow__position-prev,
+.arrow__position-next {
+    position: absolute;
+    margin-top: -30px;
+    left: 396px;
+    width: 30px;
+    height: 30px;
+    background-color: #DEE6EE;
+    border-radius: 100%;
+    cursor: pointer;
+
+    @media only screen and (min-width: 768px) and (max-width: 1279.9px) {
+        margin-top: -22px;
+        left: 125px;
+        width: 22px;
+        height: 22px;
+    }
+
+    @media only screen and (max-width: 767.9px) {
+        width: 22px;
+        height: 22px;
+        margin-top: -22px;
+        left: 36px;
+    }    
+}
+
+.arrow__position-next {
+    left: 596px;
+
+    @media only screen and (min-width: 768px) and (max-width: 1279.9px) {
+        left: 270px;
+    }
+
+    @media only screen and (max-width: 767.9px) {
+        left: 181px;
+    }  
+}
