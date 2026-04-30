@@ -91,17 +91,17 @@ const swiperBlog = new Swiper('.swiperBlog', {
                     bullet.classList.remove('swiper-pagination-bullet-active');
                 }
             });
+            document.querySelector('.swiper-pagination-bottom').addEventListener('click', (e) => {
+                if (e.target.classList.contains('swiper-pagination-bullet')) {
+                    const bullets = Array.from(e.target.parentElement.children);
+                    const index = bullets.indexOf(e.target);
+                    swiperBlog.slideToLoop(index);
+                }
+            });
         }
     }
 });
 
-document.querySelector('.swiper-pagination-bottom').addEventListener('click', (e) => {
-    if (e.target.classList.contains('swiper-pagination-bullet')) {
-        const bullets = Array.from(e.target.parentElement.children);
-        const index = bullets.indexOf(e.target);
-        swiperBlog.slideToLoop(index);
-    }
-});
 
 
 function remuveActiveClassesLanguagePanel() {
