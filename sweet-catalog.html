@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pet-project</title>
+  </head>
+  <body class="text-gray-950 font-montserrat xl:-mt-px bg-blue-100 before:hidden [.overflow-hidden]:before:block before:bg-black/20 before:w-full before:h-[100vh] before:absolute before:top-0 before:left-0 before:z-10 selection:bg-green-400/50">
+    <div class="md:ml-2 xl:ml-2.25">
+      {{> header}}
+      {{> nav-category}}
+    </div>
+    <main class="overflow-clip relative max-w-480 ml-auto mr-auto">
+    {{> sweet-info}}
+    {{> catalog-candy}}
+    <div class="absolute md:top-230.25 md:right-1 xl:top-247 xl:right-69 hidden md:block">
+      {{> feedback}}
+    </div>
+    <div class="mt-17.75 md:mt-28.5 md:ml-2 xl:-mt-121">
+      {{> slider-photo}}
+    </div>
+    <div class="xl:mt-44.25 xl:before:size-130 xl:before:border-30 xl:before:border-green-500/10 xl:before:rounded-full xl:before:absolute xl:before:top-990.25 xl:before:-right-54 xl:before:-z-10 xl:after:size-46.25 xl:after:border-15 xl:after:rounded-full xl:after:border-green-500/10 xl:after:absolute xl:after:top-1052.25 xl:after:left-108.75 xl:after:-z-10">
+    </div> 
+    <div class="md:ml-1 md:mt-24.75 xl:-mt-19.25">
+      {{> footnote}}
+    </div>
+    <br>
+    </main>
+    {{> footer}}
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
